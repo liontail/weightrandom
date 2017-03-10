@@ -1,6 +1,7 @@
 package weightrandom
 
 import (
+	"log"
 	"testing"
 
 	. "github.com/franela/goblin"
@@ -27,6 +28,7 @@ func Test(t *testing.T) {
 	allItems = append(allItems, item3)
 
 	result := DoRandom(allItems, 2)
+	log.Println(result)
 
 	expect := false
 	for _, key := range *result {

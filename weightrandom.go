@@ -9,7 +9,9 @@ import (
 func DoRandom(allItems []Items, number int) *[]Items {
 
 	items := []Items{}
-
+	if len(allItems) < number {
+		number = len(allItems)
+	}
 	for i := 0; i < number; i++ {
 		item, index := getItemFromRandom(allItems)
 		items = append(items, *item)
