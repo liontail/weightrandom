@@ -35,6 +35,8 @@ result := weightrandom.DoRandom(allItems, 1)
 fmt.Println("Result: ", *result)
 .....
 ```
+output will be like
+- [{80 3}]
 
 ## Example 2
 
@@ -61,8 +63,11 @@ allItems := []weightrandom.Items{
   	},
   }
 
-result := weightrandom.DoRandom(allItems, 1)
+result := weightrandom.DoRandom(allItems, 2)
 
 fmt.Println("Result: ", *result)
-```
+
 .....
+```
+output will be like
+- [{70 "Gooooo"} ,{60 "Hello"}]
