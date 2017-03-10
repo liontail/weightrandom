@@ -3,7 +3,7 @@ Weight Random
 
 Item's Data
 -----------
-date is interface so it can assign any value to it
+data is interface so it can assign any value to it
 
 ## Example
 
