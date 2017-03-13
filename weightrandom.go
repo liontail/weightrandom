@@ -7,15 +7,16 @@ import (
 )
 
 func DoRandom(allItems []Items, number int) *[]Items {
-
 	items := []Items{}
 	if len(allItems) < number {
 		number = len(allItems)
 	}
+	var newItems []Items = make([]Items, len(allItems))
+	copy(newItems, allItems)
 	for i := 0; i < number; i++ {
-		item, index := getItemFromRandom(allItems)
+		item, index := getItemFromRandom(newItems)
 		items = append(items, *item)
-		allItems = append(allItems[:index], allItems[(index+1):]...)
+		newItems = append(newItems[:index], newItems[(index+1):]...)
 	}
 	return &items
 }

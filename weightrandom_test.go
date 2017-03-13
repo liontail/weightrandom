@@ -3,6 +3,7 @@ package weightrandom
 import (
 	"testing"
 
+	"github.com/Sirupsen/logrus"
 	. "github.com/franela/goblin"
 	// . "github.com/onsi/gomega"
 )
@@ -14,15 +15,15 @@ func Test(t *testing.T) {
 	allItems := []Items{
 		Items{
 			Weight: 10,
-			Data:   uint(1),
+			Data:   "Item1",
 		},
 		Items{
 			Weight: 10,
-			Data:   uint(2),
+			Data:   "Item2",
 		},
 		Items{
 			Weight: 80,
-			Data:   uint(3),
+			Data:   "Item3",
 		},
 	}
 
@@ -32,12 +33,13 @@ func Test(t *testing.T) {
 	// Expect Items with most weight
 	expect := false
 	for _, key := range *result {
-		if key.Data == uint(3) {
+		if key.Data == "Item3" {
 			expect = true
 		}
 	}
 	g.Describe("Test_WeightRandom", func() {
 		g.It("Should Get Item3 That has most Weight", func() {
+			logrus.Infoln("Result : ", result)
 			g.Assert(expect).Equal(true)
 		})
 	})
