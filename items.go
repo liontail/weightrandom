@@ -7,7 +7,7 @@ type Items struct {
 
 func NewItem(weight int, data interface{}) *Items {
 	return &Items{
-		Weight: int,
+		Weight: weight,
 		Data:   data,
 	}
 }
