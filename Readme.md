@@ -1,4 +1,4 @@
-Weight Random
+Weight Random library for golang
 ======
 
 Item's Data
