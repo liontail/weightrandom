@@ -3,7 +3,6 @@ package weightrandom
 import (
 	"testing"
 
-	"github.com/Sirupsen/logrus"
 	. "github.com/franela/goblin"
 	// . "github.com/onsi/gomega"
 )
@@ -39,7 +38,6 @@ func Test(t *testing.T) {
 	}
 	g.Describe("Test_WeightRandom", func() {
 		g.It("Should Get Item3 That has most Weight", func() {
-			logrus.Infoln("Result : ", result)
 			g.Assert(expect).Equal(true)
 		})
 	})
